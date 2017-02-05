@@ -21,4 +21,6 @@ dependencies {
     compile("org.spockframework:spock-core:$spockVersion") {
         exclude group: "org.codehaus.groovy"
     }
+    compile 'org.slf4j:slf4j-simple:1.7.12'
+    compile "commons-io:commons-io:2.1"
 }

@@ -1,0 +1,24 @@
+group 'com.carst'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+ext {
+    groovyVersion = '2.4.7'
+    spockVersion = '1.0-groovy-2.4'
+}
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    compile("org.spockframework:spock-core:$spockVersion") {
+        exclude group: "org.codehaus.groovy"
+    }
+}
